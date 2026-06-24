@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saltfish | Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css?v=26">
+  </head>
+  <body class="blog-page">
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Project</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="side.html">???</a>
+      </nav>
+    </header>
+
+    <main class="page-shell is-command-pending" data-command-page>
+      <section class="page-intro" aria-labelledby="blog-title">
+        <p class="terminal-prompt" data-command-typewriter><span class="terminal-host">saltfish@blog</span>:~$ <span class="terminal-command">cat ./notes/index.md</span></p>
+        <h1 id="blog-title">Blog</h1>
+        <p>
+          Small thoughts from the pier.
+        </p>
+      </section>
+
+      <section class="blog-list" aria-label="Blog placeholder">
+        <article class="blog-post" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="blog-card-dialog" data-preview-card>
+          <div class="blog-meta">
+            <time>future</time>
+            <span>upcoming</span>
+          </div>
+          <h2>Coming Soon</h2>
+          <p>
+            Nothing posted yet. This space is reserved for future notes.
+          </p>
+          <div class="tag-row">
+            <span>Future</span>
+            <span>Draft</span>
+          </div>
+          <div class="preview-extra">
+            <p>
+              This centered preview will hold the full article when there is something to read.
+            </p>
+            <p>
+              For now, it stays here instead of navigating to a separate page.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <dialog class="card-preview-dialog" id="blog-card-dialog" aria-label="Blog preview">
+      <button class="dialog-close" type="button" data-preview-close aria-label="Close preview">x</button>
+      <div class="preview-dialog-content" data-preview-content></div>
+    </dialog>
+    <script src="script.js?v=4"></script>
+  </body>
+</html>

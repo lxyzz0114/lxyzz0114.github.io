@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saltfish | Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css?v=26">
+  </head>
+  <body class="project-page">
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Project</a>
+        <a href="blog.html">Blog</a>
+        <a href="side.html">???</a>
+      </nav>
+    </header>
+
+    <main class="page-shell is-command-pending" data-command-page>
+      <section class="page-intro" aria-labelledby="projects-title">
+        <p class="terminal-prompt" data-command-typewriter><span class="terminal-host">saltfish@projects</span>:~$ <span class="terminal-command">ls ./projects</span></p>
+        <h1 id="projects-title">Project</h1>
+        <p>
+          Where the saltfish briefly becomes productive.
+        </p>
+      </section>
+
+      <section class="project-terminal-grid is-single" aria-label="Projects">
+        <article class="project-terminal" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="project-card-dialog" data-preview-card>
+          <div class="terminal-window-bar">
+            <div class="window-dots" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <p><span class="terminal-command">$ building MTA_Arrival_Time_Clock</span></p>
+          </div>
+          <div class="terminal-window-body">
+            <h2>MTA Arrival Time Clock</h2>
+            <p>
+              NYC subway arrival board that pulls MTA GTFS-Realtime feeds and formats the next trains for selected stations.
+            </p>
+            <div class="tag-row">
+              <span>ESP32</span>
+            </div>
+            <div class="card-topline terminal-status">
+              <span class="status-label">
+                <span class="status-dot build"></span>
+                <span>Building</span>
+              </span>
+              <a class="terminal-jump" href="https://github.com/lxyzz0114/MTA-Arrival-Time-Clock" target="_blank" rel="noopener">GitHub -&gt;</a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <dialog class="card-preview-dialog" id="project-card-dialog" aria-label="Project preview">
+      <button class="dialog-close" type="button" data-preview-close aria-label="Close preview">x</button>
+      <div class="preview-dialog-content" data-preview-content></div>
+    </dialog>
+    <script src="script.js?v=4"></script>
+  </body>
+</html>
