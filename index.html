@@ -4,14 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Saltfish</title>
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem("saltfish-theme")||"dark"}catch(e){document.documentElement.dataset.theme="dark"}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=LXGW+WenKai&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,500&amp;family=Noto+Sans+SC:wght@400;600&amp;family=Pixelify+Sans:wght@500;600;700&amp;family=Silkscreen:wght@400;700&amp;display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=26">
+    <link rel="stylesheet" href="styles.css?v=29">
   </head>
   <body class="home-page">
     <header class="site-header">
+      <div class="header-identity">
+        <a class="site-id" href="index.html">SALTFISH <span>v1.0</span></a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode">[ LIGHT ]</button>
+      </div>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="projects.html">Project</a>
@@ -23,9 +28,9 @@
     <main class="home-main">
       <section class="hero home-hero" aria-labelledby="home-title">
         <div class="hero-content">
-          <p class="terminal-prompt"><span class="terminal-host">saltfish@home</span>:~$ <span class="terminal-command">define saltfish</span></p>
-          <h1 id="home-title" data-typewriter-title>Saltfish <span>|</span> <span lang="zh-Hans">咸鱼</span></h1>
-          <div class="definition-panel" aria-label="Saltfish definition" data-typewriter>
+          <h1 id="home-title">Saltfish <span>|</span> <span lang="zh-Hans">咸鱼</span></h1>
+          <div class="definition-panel" aria-label="Saltfish definition">
+            <p class="terminal-prompt"><span class="terminal-host">saltfish@home</span>:~$ <span class="terminal-command">define saltfish</span><span class="typing-cursor" aria-hidden="true"></span></p>
             <p class="literal-line"><strong>noun</strong></p>
             <div class="saltfish-stats">
               <p><span>Low-pressure soul, gently coasting through life.</span></p>
@@ -34,9 +39,10 @@
             </div>
             <blockquote lang="zh-Hans">“做人如果冇梦想，同条咸鱼有乜分别啊？”</blockquote>
           </div>
+          <a class="primary-jump" href="projects.html">[ ENTER PROJECT LOG ]</a>
         </div>
       </section>
     </main>
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
   </body>
 </html>

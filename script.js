@@ -1,3 +1,37 @@
+const themeStorageKey = "saltfish-theme";
+const themeToggles = document.querySelectorAll("[data-theme-toggle]");
+
+const updateThemeControls = (theme) => {
+  themeToggles.forEach((toggle) => {
+    const nextTheme = theme === "light" ? "dark" : "light";
+    toggle.textContent = `[ ${nextTheme.toUpperCase()} ]`;
+    toggle.setAttribute("aria-label", `Switch to ${nextTheme} mode`);
+    toggle.setAttribute("aria-pressed", String(theme === "light"));
+  });
+};
+
+const setTheme = (theme, persist = true) => {
+  document.documentElement.dataset.theme = theme;
+  updateThemeControls(theme);
+
+  if (persist) {
+    try {
+      localStorage.setItem(themeStorageKey, theme);
+    } catch (error) {
+      // The theme still applies when storage is unavailable.
+    }
+  }
+};
+
+const initialTheme = document.documentElement.dataset.theme === "light" ? "light" : "dark";
+setTheme(initialTheme, false);
+
+themeToggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    setTheme(document.documentElement.dataset.theme === "light" ? "dark" : "light");
+  });
+});
+
 const titleTypewriter = document.querySelector("[data-typewriter-title]");
 const definitionTypewriter = document.querySelector("[data-typewriter]");
 const commandTypewriters = document.querySelectorAll("[data-command-typewriter]");

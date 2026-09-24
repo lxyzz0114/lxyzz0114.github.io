@@ -4,14 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Saltfish | Projects</title>
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem("saltfish-theme")||"dark"}catch(e){document.documentElement.dataset.theme="dark"}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,500&amp;family=Noto+Sans+SC:wght@400;600&amp;family=Pixelify+Sans:wght@500;600;700&amp;family=Silkscreen:wght@400;700&amp;display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=26">
+    <link rel="stylesheet" href="styles.css?v=29">
   </head>
   <body class="project-page">
     <header class="site-header">
+      <div class="header-identity">
+        <a class="site-id" href="index.html">SALTFISH <span>v1.0</span></a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode">[ LIGHT ]</button>
+      </div>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="projects.html" aria-current="page">Project</a>
@@ -62,6 +67,6 @@
       <button class="dialog-close" type="button" data-preview-close aria-label="Close preview">x</button>
       <div class="preview-dialog-content" data-preview-content></div>
     </dialog>
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
   </body>
 </html>
